@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+  exclave-control-center:
+    build: ./exclave-control-center
+    privileged: true
+  some_other_service:
+    build: ./some_other_servicer
+    restart: always
+    privileged: true

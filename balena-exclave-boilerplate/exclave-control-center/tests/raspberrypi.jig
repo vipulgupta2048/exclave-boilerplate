@@ -1,0 +1,6 @@
+[Jig]
+Name=Raspberrypi3 Jig
+Description=Boilerplate Development Jig 
+TestFile=/etc
+DefaultScenario=cli-testing
+DefaultWorkingDirectory=../core/tests

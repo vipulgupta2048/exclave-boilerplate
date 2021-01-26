@@ -1,0 +1,16 @@
+version: "2"
+slug: "testbotbotblock"
+name: "testbotbotblock"
+type: "sw.application"
+assets:
+  - url: "https://github.com/vipulgupta2048/testbotbotblock"
+    name: "repository"
+  - url: "https://raw.githubusercontent.com/vipulgupta2048/testbotbotblock/master/logo.png"
+    name: "logo"
+data:
+  description: "Drop-in balena block for interacting with your testbot remotely"
+  defaultDeviceType: "raspberrypi3"
+  applicationEnvironmentVariables: {}
+  applicationConfigVariables:
+    - BALENA_HOST_CONFIG_core_freq: "250"
+    - RESIN_HOST_CONFIG_dtoverlay: "\"balena-fin\",\"uart1,txd1_pin=32,rxd1_pin=33\""

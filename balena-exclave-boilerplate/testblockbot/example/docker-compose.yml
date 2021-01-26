@@ -1,0 +1,16 @@
+version: '2'
+
+volumes:
+  os-images:
+
+services:
+  testblockbot:
+    image: balenablocks/testblockbot:latest
+    privileged: true
+    restart: always
+    volumes:
+      - os-images:/images
+    expose:
+      - "5001"
+    environment: 
+      - DBUS_SYSTEM_BUS_ADDRESS=unix:path=/host/run/dbus/system_bus_socket

@@ -1,0 +1,5 @@
+[Scenario]
+Name=Socks5 Proxy Test!
+Description=quick test inside container
+Tests=balena-os-configure, testbot-poweron-dut, supervisor-host-config, testbot-reboot-dut
+Timeout=5000
