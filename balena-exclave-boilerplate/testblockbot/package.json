@@ -1,6 +1,6 @@
 {
   "name": "testblockbot",
-  "version": "1.0.0",
+  "version": "1.2.1",
   "description": "Drop-in balena block for interacting with your testbot remotely",
   "main": "index.js",
   "scripts": {

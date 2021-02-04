@@ -33,7 +33,11 @@ RUN git clone https://github.com/balena-io-playground/exclave . && \
     git checkout ${EXCLAVE_VERSION} && \
     cargo build 
 
+# install balena cli if needed
+# RUN npm install balena-cli@${BALENA_CLI_VERSION} -g --production --unsafe-perm
+
 # To keep things simpler, everything else needed for tests is installed in /usr/src/core/
+
 
 # Uncomment following lines if (private) NPM packages are needed to be installed
 # COPY package* /usr/src/core/
@@ -41,8 +45,8 @@ RUN git clone https://github.com/balena-io-playground/exclave . && \
 # NPM install + Using .npmrc stored in .balena directory to install NPM packages
 # RUN res=0; ( cp /run/secrets/.npmrc /usr/src/core/ && npm install --prefix /usr/src/core/ ) || res=1; rm /usr/src/core/.npmrc; exit $res
 
-# install balena cli if needed
-# RUN npm install balena-cli@${BALENA_CLI_VERSION} -g --production --unsafe-perm
+# OR just a simple npm install
+# RUN npm install
 
 # copy source files
 COPY . /usr/src/core/
